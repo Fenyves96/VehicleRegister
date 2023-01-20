@@ -1,6 +1,7 @@
-package dao;
+package org.example.dao;
 
-import entity.Vehicle;
+
+import org.example.entity.Vehicle;
 
 public interface VehicleRepository {
     void saveVehicle(Vehicle vehicle);
