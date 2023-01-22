@@ -1,4 +1,4 @@
-package hu.fenyvesvolgyimate.vehicleregisterapp.dao;
+package hu.fenyvesvolgyimate.vehicleregisterapp.storage;
 
 
 import hu.fenyvesvolgyimate.vehicleregisterapp.entity.Vehicle;

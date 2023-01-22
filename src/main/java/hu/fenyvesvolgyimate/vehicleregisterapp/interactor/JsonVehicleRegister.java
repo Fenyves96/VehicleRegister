@@ -1,6 +1,6 @@
 package hu.fenyvesvolgyimate.vehicleregisterapp.interactor;
 
-import hu.fenyvesvolgyimate.vehicleregisterapp.dao.VehicleRepository;
+import hu.fenyvesvolgyimate.vehicleregisterapp.storage.VehicleRepository;
 import hu.fenyvesvolgyimate.vehicleregisterapp.entity.Vehicle;
 import hu.fenyvesvolgyimate.vehicleregisterapp.presenter.VehicleUserInterface;
 import hu.fenyvesvolgyimate.vehicleregisterapp.parser.VehicleParser;
