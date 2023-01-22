@@ -1,6 +1,6 @@
 package org.example.controller;
 
-public interface VehicleController {
+public interface VehicleRegister {
     void createVehicle(String vehicleJson);
     void getVehicleByRegisterNumber(String registerNumber);
 }
