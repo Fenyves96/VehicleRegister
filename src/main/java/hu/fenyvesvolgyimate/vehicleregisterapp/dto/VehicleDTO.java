@@ -1,6 +1,6 @@
-package org.example.entity;
+package hu.fenyvesvolgyimate.vehicleregisterapp.dto;
 
-public class Vehicle {
+public class VehicleDTO {
     String registrationNumber;
     String make;
     String model;

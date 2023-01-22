@@ -1,4 +1,4 @@
-package org.example.presenter;
+package hu.fenyvesvolgyimate.vehicleregisterapp.presenter;
 
 public interface VehicleUserInterface {
     void displayVehicle(String json);

@@ -1,6 +1,6 @@
-package org.example.parser;
+package hu.fenyvesvolgyimate.vehicleregisterapp.parser;
 
-import org.example.parser.exception.InvalidJsonException;
+import hu.fenyvesvolgyimate.vehicleregisterapp.parser.exception.InvalidJsonException;
 import org.json.JSONException;
 import org.json.JSONObject;
 

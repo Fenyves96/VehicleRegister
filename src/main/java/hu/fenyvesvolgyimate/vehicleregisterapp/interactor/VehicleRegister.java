@@ -1,4 +1,4 @@
-package org.example.interactor;
+package hu.fenyvesvolgyimate.vehicleregisterapp.interactor;
 
 public interface VehicleRegister {
     void register(String vehicleJson);

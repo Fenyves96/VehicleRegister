@@ -1,7 +1,7 @@
-package org.example.validation;
+package hu.fenyvesvolgyimate.vehicleregisterapp.validation;
 
-import org.example.exception.InvalidRegisterNumberException;
-import org.example.parser.VehicleParser;
+import hu.fenyvesvolgyimate.vehicleregisterapp.parser.VehicleParser;
+import hu.fenyvesvolgyimate.vehicleregisterapp.exception.InvalidRegisterNumberException;
 
 public class VehicleValidator {
     VehicleParser vehicleParser = new VehicleParser();

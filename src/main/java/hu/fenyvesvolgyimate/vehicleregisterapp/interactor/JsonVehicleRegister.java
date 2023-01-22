@@ -1,10 +1,10 @@
-package org.example.interactor;
+package hu.fenyvesvolgyimate.vehicleregisterapp.interactor;
 
-import org.example.dao.VehicleRepository;
-import org.example.entity.Vehicle;
-import org.example.presenter.VehicleUserInterface;
-import org.example.parser.VehicleParser;
-import org.example.validation.VehicleValidator;
+import hu.fenyvesvolgyimate.vehicleregisterapp.dao.VehicleRepository;
+import hu.fenyvesvolgyimate.vehicleregisterapp.entity.Vehicle;
+import hu.fenyvesvolgyimate.vehicleregisterapp.presenter.VehicleUserInterface;
+import hu.fenyvesvolgyimate.vehicleregisterapp.parser.VehicleParser;
+import hu.fenyvesvolgyimate.vehicleregisterapp.validation.VehicleValidator;
 
 public class JsonVehicleRegister implements VehicleRegister {
     VehicleValidator vehicleValidator = new VehicleValidator();

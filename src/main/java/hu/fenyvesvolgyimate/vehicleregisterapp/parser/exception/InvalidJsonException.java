@@ -1,4 +1,4 @@
-package org.example.parser.exception;
+package hu.fenyvesvolgyimate.vehicleregisterapp.parser.exception;
 
 public class InvalidJsonException extends RuntimeException {
     @Override

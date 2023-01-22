@@ -1,6 +1,6 @@
-package org.example.parser;
+package hu.fenyvesvolgyimate.vehicleregisterapp.parser;
 
-import org.example.entity.Vehicle;
+import hu.fenyvesvolgyimate.vehicleregisterapp.entity.Vehicle;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
