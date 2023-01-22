@@ -1,46 +1,11 @@
 package org.example.parser;
 
 import org.example.entity.Vehicle;
-import org.example.parser.exception.InvalidJsonException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class VehicleParser {
-    public String parseRegistrationNumber(String vehicleJson) {
-        return parseStringValueFromJsonStringByKey(vehicleJson ,"registrationNumber");
-    }
-
-    private String parseStringValueFromJsonStringByKey(String jsonString, String key) {
-        String result;
-        JSONObject jsonObject = tryParse(jsonString);
-        result = getStringValue(jsonObject, key);
-        return result;
-    }
-
-    private String getStringValue(JSONObject jsonString, String key) {
-        String result = null;
-        try {
-            result = jsonString.getString(key);
-        } catch (JSONException e) {
-            System.out.println("invalid JsonKey");
-        }
-        return result;
-    }
-
-    private JSONObject tryParse(String outPutFileNameInJson) {
-        JSONObject result;
-        try {
-            result = new JSONObject(outPutFileNameInJson);
-        } catch (JSONException e) {
-            throw new InvalidJsonException();
-        }
-        return result;
-    }
-
-    private Integer parseIntValueFromJsonStringByKey(String jsonString, String key) {
-        String stringValue = parseStringValueFromJsonStringByKey(jsonString, key);
-        return Integer.valueOf(stringValue);
-    }
+    JsonParser jsonParser = new JsonParser();
 
     public String parseVehicleToJson(Vehicle vehicle) {
         JSONObject jsonObject = new JSONObject();
@@ -73,19 +38,23 @@ public class VehicleParser {
         return vehicle;
     }
 
+    public String parseRegistrationNumber(String vehicleJson) {
+        return jsonParser.parseStringValueFromJsonStringByKey(vehicleJson ,"registrationNumber");
+    }
+
     private String parseType(String vehicleJson) {
-        return parseStringValueFromJsonStringByKey(vehicleJson, "type");
+        return jsonParser.parseStringValueFromJsonStringByKey(vehicleJson, "type");
     }
 
     private int parseNumberOfSeats(String vehicleJson) {
-        return parseIntValueFromJsonStringByKey(vehicleJson, "numberOfSeats");
+        return jsonParser.parseIntValueFromJsonStringByKey(vehicleJson, "numberOfSeats");
     }
 
     private String parseModel(String vehicleJson) {
-        return parseStringValueFromJsonStringByKey(vehicleJson, "model");
+        return jsonParser.parseStringValueFromJsonStringByKey(vehicleJson, "model");
     }
 
     private String parseMake(String vehicleJson) {
-        return parseStringValueFromJsonStringByKey(vehicleJson, "make");
+        return jsonParser.parseStringValueFromJsonStringByKey(vehicleJson, "make");
     }
 }

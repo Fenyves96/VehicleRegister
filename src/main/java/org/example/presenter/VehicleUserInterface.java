@@ -1,4 +1,4 @@
-package org.example.gui;
+package org.example.presenter;
 
 public interface VehicleUserInterface {
     void displayVehicle(String json);
