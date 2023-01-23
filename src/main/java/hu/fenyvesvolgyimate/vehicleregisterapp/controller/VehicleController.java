@@ -1,5 +1,8 @@
 package hu.fenyvesvolgyimate.vehicleregisterapp.controller;
 
+import hu.fenyvesvolgyimate.vehicleregisterapp.dto.VehicleDTO;
+
 public interface VehicleController {
-    void start();
+    void getVehicleByRegistrationNumber(String registrationNumber);
+    void registerVehicle(VehicleDTO vehicle);
 }
