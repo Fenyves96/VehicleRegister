@@ -2,7 +2,7 @@ package hu.fenyvesvolgyimate.vehicleregisterapp.interactor;
 
 import hu.fenyvesvolgyimate.vehicleregisterapp.storage.VehicleRepository;
 import hu.fenyvesvolgyimate.vehicleregisterapp.entity.Vehicle;
-import hu.fenyvesvolgyimate.vehicleregisterapp.presenter.VehicleUserInterface;
+import hu.fenyvesvolgyimate.vehicleregisterapp.presenter.VehiclePresenter;
 import hu.fenyvesvolgyimate.vehicleregisterapp.parser.VehicleParser;
 import hu.fenyvesvolgyimate.vehicleregisterapp.validation.VehicleValidator;
 
@@ -10,11 +10,11 @@ public class JsonVehicleRegister implements VehicleRegister {
     VehicleValidator vehicleValidator = new VehicleValidator();
     VehicleParser vehicleParser = new VehicleParser();
     VehicleRepository vehicleRepository;
-    VehicleUserInterface vehicleUserInterface;
+    VehiclePresenter vehiclePresenter;
 
-    public JsonVehicleRegister(VehicleRepository vehicleRepository, VehicleUserInterface presenter) {
+    public JsonVehicleRegister(VehicleRepository vehicleRepository, VehiclePresenter presenter) {
         this.vehicleRepository = vehicleRepository;
-        this.vehicleUserInterface = presenter;
+        this.vehiclePresenter = presenter;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class JsonVehicleRegister implements VehicleRegister {
         vehicleValidator.validate(vehicleJsonRequest);
         Vehicle vehicle = vehicleParser.parseJsonToVehicle(vehicleJsonRequest);
         vehicleRepository.saveVehicle(vehicle);
-        vehicleUserInterface.displayMessage("{\"message\" : \"Sikeres mentés\"}");
+        vehiclePresenter.displayMessage("{\"message\" : \"Sikeres mentés\"}");
     }
 
     @Override
@@ -31,6 +31,6 @@ public class JsonVehicleRegister implements VehicleRegister {
         String registrationNumber = vehicleParser.parseRegistrationNumber(registrationNumberJson);
         Vehicle vehicle = vehicleRepository.findVehicleByRegistrationNumber(registrationNumber);
         String response = vehicleParser.parseVehicleToJson(vehicle);
-        vehicleUserInterface.displayVehicle(response);
+        vehiclePresenter.displayVehicle(response);
     }
 }

@@ -1,6 +1,6 @@
 package hu.fenyvesvolgyimate.vehicleregisterapp.presenter;
 
-public interface VehicleUserInterface {
+public interface VehiclePresenter {
     void displayVehicle(String json);
     void displayMessage(String json);
 }
