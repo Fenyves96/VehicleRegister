@@ -22,10 +22,10 @@ public class JsonParser {
         return result;
     }
 
-    private JSONObject tryParse(String outPutFileNameInJson) {
+    private JSONObject tryParse(String jsonString) {
         JSONObject result;
         try {
-            result = new JSONObject(outPutFileNameInJson);
+            result = new JSONObject(jsonString);
         } catch (JSONException e) {
             throw new InvalidJsonException();
         }
