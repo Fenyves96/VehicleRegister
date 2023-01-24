@@ -6,6 +6,15 @@ public class VehicleDTO {
     String model;
     int numberOfSeats;
     String vehicleType;
+    String motorEmissionType;
+
+    public String getMotorEmissionType() {
+        return motorEmissionType;
+    }
+
+    public void setMotorEmissionType(String motorEmissionType) {
+        this.motorEmissionType = motorEmissionType;
+    }
 
     public String getRegistrationNumber() {
         return registrationNumber;
